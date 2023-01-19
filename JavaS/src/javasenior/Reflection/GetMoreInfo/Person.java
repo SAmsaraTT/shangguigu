@@ -21,8 +21,8 @@ public class Person extends Creature<String> implements Comparable<String>, MyIn
         return citizenship;
     }
 
-    public String display(String interest) {
-        return interest;
+    public String display(String interest, int age) throws NullPointerException, ClassCastException{
+        return interest + age;
     }
     @Override
     public int compareTo(String o) {
