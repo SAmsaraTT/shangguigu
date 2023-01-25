@@ -1,4 +1,4 @@
-package javasenior.java8;
+package javasenior.java8.Lambda;
 
 /**
  * @Author hliu
