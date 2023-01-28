@@ -13,6 +13,9 @@ import java.util.stream.Stream;
  *
  * 测试Stream的中间操作
  *
+ * 常用的方法：ofNullable(T t)
+ * orElse(T t)
+ *
  * @Author hliu
  * @Date 2023/1/26 18:00
  * @Version 1.0
@@ -76,5 +79,23 @@ public class StreamAPTTest1 {
         }
 
         return list.stream();
+    }
+
+    //3-排序
+    @Test
+    public void test3() {
+        //sorted()——自然排序
+        List<Integer> list = Arrays.asList(1, 3, 8, 3, 89, 12, 123, 43, 23, -9);
+        list.stream().sorted().forEach(System.out::println);
+
+        //sorted(Comparator com)——定制排序
+        List<Employee> employees = EmployeeData.getEmployees();
+        employees.stream().sorted((a, b) -> {
+            if (a.getAge() != b.getAge()) {
+                return Integer.compare(a.getAge(), b.getAge());
+            }
+            return Double.compare(b.getSalary(), a.getSalary());
+        }).forEach(e -> System.out.println(e));
+
     }
 }
