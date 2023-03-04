@@ -63,12 +63,12 @@ public class ReflectionTest {
         System.out.println(clazz2);
 
         //way 3
-        Class aClass = Class.forName("cn.javasenior.Reflection.Person");
+        Class aClass = Class.forName("javasenior.Reflection.Person");
         System.out.println(aClass);
 
         //way 4
         ClassLoader classLoader = ReflectionTest.class.getClassLoader();
-        Class<?> aClass1 = classLoader.loadClass("cn.javasenior.Reflection.Person");
+        Class<?> aClass1 = classLoader.loadClass("javasenior.Reflection.Person");
         System.out.println(aClass1 == aClass);
 
 

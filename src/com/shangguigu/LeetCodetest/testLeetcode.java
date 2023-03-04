@@ -1,5 +1,6 @@
 package com.shangguigu.LeetCodetest;
 
+import com.sun.media.jfxmediaimpl.HostUtils;
 import org.junit.jupiter.api.Test;
 
 
@@ -70,6 +71,18 @@ class Solution {
         String user = properties.getProperty("user");
         String password = properties.getProperty("password");
         System.out.println("user = " + user + ",password = " + password);
+    }
+
+    @Test
+    public void test3() {
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>() {
+            {
+                put(1, 2);
+                put(2, 3);
+            }
+        };
+
+        map.forEach((a, b) -> System.out.println(a + "." + b));
     }
 
 
